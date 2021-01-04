@@ -1,0 +1,35 @@
+<!Doctype html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Games 'n Stuff</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+</head>
+
+<body>
+
+  {% include 'scanner/includes/messagePop.html' %}
+
+  <nav style="position: fixed; top: 0">
+    <div class="nav-wrapper">
+      <a href="/" class="brand-logo" style="padding-left: 40px; font-family: 'Comic Sans MS', cursive, sans-serif">
+        Games 'n Stuff</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="/">Scanner</a></li>
+        <li><a href="/overview/">Overview</a></li>
+        <li><a href="/history/">History</a></li>
+        <li><a href="/logout/">Logout</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container" style="padding-top: 100px;">
+      {% block content %}
+      {% endblock %}
+  </div>
+
+
+</body>

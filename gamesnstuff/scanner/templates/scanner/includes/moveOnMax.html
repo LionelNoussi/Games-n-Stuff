@@ -1,0 +1,27 @@
+<script>
+    var input = document.getElementById('student_id');
+    input.focus();
+
+    function moveOnMax(field, the_id){
+        if (state == 'scanner'){
+          if (the_id == "item") {
+            document.forms[0].submit();
+            return
+          }
+
+          {% for item in itemList %}
+            if (field.value == "{{item}}") {
+              var input = document.getElementById('item');
+              input.focus();
+              input.value = "Returning";
+              document.forms[0].submit();
+              return
+            }
+          {% endfor %}
+
+          var input = document.getElementById('item');
+          input.focus();
+        }
+    }
+
+</script>

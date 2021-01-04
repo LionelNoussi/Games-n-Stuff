@@ -1,0 +1,31 @@
+<form action="/" method="post" novalidate>
+  {% csrf_token %}
+
+  {{ form.non_field_errors }}
+  {{ form.source.errors }}
+  {{ form.source }}
+
+  <div class="row">
+    <form class="col s12">
+      <div class="row">
+        <div class="input-field col s6">
+          {{ form.student_id.label_tag }}
+          {{ form.student_id }}
+        </div>
+        <div class="input-field col s6">
+          {{ form.item.label_tag }}
+          {{ form.item }}
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <button type="submit" id='submitB' onclick="document.forms[0].submit()"
+  class="waves-effect waves-light btn"
+  style="position: absolute;
+  visibility: hidden;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);">Submit</button>
+
+</form>

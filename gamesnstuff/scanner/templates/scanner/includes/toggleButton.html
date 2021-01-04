@@ -1,0 +1,43 @@
+<br>
+<a class="waves-effect waves-light btn"
+   style="position: absolute;
+          left: 50%;
+          -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);"
+   id="toggleB"
+   onclick="toggle()">
+      Switch to Manual Mode
+</a>
+
+<script>
+  var state = "scanner";
+  var studentT = document.getElementById("student_id");
+  var itemT = document.getElementById("item");
+
+  studentT.addEventListener("keyup", function(event) {
+    if (event.keyCode == 13) {
+      returning();
+    }
+  });
+  itemT.addEventListener("keyup", function(event) {
+      if (event.keyCode == 13) {
+        document.forms[0].submit();
+      }
+  });
+
+
+  function toggle() {
+    if (state == "scanner"){
+      document.getElementById("toggleB").innerHTML = "Switch to Scanner Mode";
+      state = "manuel";
+      document.getElementById("submitB").style.visibility = 'visible';
+      document.getElementById('student_id').focus();
+
+    } else {
+      document.getElementById("toggleB").innerHTML = "Switch to Manuel Mode";
+      state = "scanner";
+      document.getElementById("submitB").style.visibility = 'hidden';
+      document.getElementById('student_id').focus();
+    }
+  }
+</script>

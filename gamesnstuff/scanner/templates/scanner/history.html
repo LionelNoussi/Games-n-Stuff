@@ -1,0 +1,33 @@
+{% extends "scanner/header.html" %}
+
+{% block content %}
+
+  <h5>History: </h5>
+  <hr>
+
+  <table class="highlight">
+    <thead>
+      <tr>
+          <th>ID</th>
+          <th>Student</th>
+          <th>Item Name</th>
+          <th>Date Borrowed</th>
+          <th>Return Date</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      {% for entry in missingDic.missing %}
+        <tr>
+          <td>{{entry.0}}</td>
+          <td>{{entry.1}}</td>
+          <td>{{entry.2}}</td>
+          <td>{{entry.3}}</td>
+          <td>{{entry.4}}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  <br><br><br>
+
+{% endblock %}

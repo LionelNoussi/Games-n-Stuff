@@ -1,0 +1,44 @@
+{% extends "scanner/header.html" %}
+
+{% block content %}
+
+  <h5>All of the missing items: </h5>
+  <hr>
+
+  <table class="highlight">
+    <thead>
+      <tr>
+          <th>Student</th>
+          <th>Item Name</th>
+          <th>Date Borrowed</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <script>var counter = 0;</script>
+      {% for entry in missingDic.missing %}
+        <script>var counter = counter + 1</script>
+        <tr>
+          <td>{{entry.0}}</td>
+          <td>{{entry.1}}</td>
+          <td>{{entry.2}}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+  <br>
+
+  <p id="no_missing"
+     style="position: absolute;
+            left: 50%;
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            font-weight: bold;"></p>
+  <script>
+    if (counter == 0) {
+      document.getElementById('no_missing').innerHTML = "No items are missing!"
+    }
+  </script>
+
+{% endblock %}

@@ -1,0 +1,18 @@
+<script>
+
+    function returning() {
+        var student_id = document.getElementById('student_id');
+        {% for item in itemList %}
+          if (student_id.value == "{{item}}") {
+            var input = document.getElementById('item');
+            input.focus();
+            input.value = "Returning";
+            document.forms[0].submit();
+            return
+          }
+        {% endfor %}
+        var input = document.getElementById('item');
+        input.focus();
+    }
+
+</script>
