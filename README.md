@@ -13,13 +13,14 @@ MyEmail: lio.noussi@gmail.com
 
 To visit the site, go to: http://lionel17.eu.pythonanywhere.com
 
-You can log in with the guest user to get a feel for the site:
-username: guest
-password: thepsswd
+You can log in with the guest user to get a feel for the site\:
+username\: guest
+password\: thepsswd
 
 To borrow an item I recommend using the manuel mode if you don't randomly have a scanner lying around at home.
 
-An example student ID is: 90001234
+An example student ID is\: 90001234
+
 Items which you can borrow are: UNO, Schachbrett, Kartendeck 1 (the items are written in German)
 
 To borrow an item, just type in the ID and than write down the item.
